@@ -1,0 +1,10 @@
+// SQL Membuat Tabel Mahasiswa
+CREATE TABLE mahasiswa (nim CHAR(8), nama VARCHAR(100),tempat_lahir VARCHAR(50), tanggal_lahir DATE, fakultas VARCHAR(50), jurusan VARCHAR(50),ipk DECIMAL(3,2), PRIMARY KEY (nim));
+
+// SQL Menambah data mahasiswa
+INSERT INTO mahasiswa VALUES
+('14005011', 'Riana Putria', 'Padang', '1996-11-23','FMIPA', 'Kimia', 3.1),
+('15021044', 'Rudi Permana', 'Bandung', '1994-08-22','FASILKOM', 'Ilmu Komputer', 2.9),
+('15003036', 'Sari Citra Lestari', 'Jakarta', '1997-12-31','Ekonomi', 'Manajemen', 3.5),
+('15002032', 'Rina Kumala Sari', 'Jakarta', '1997-06-28','Ekonomi', 'Akuntansi', 3.4),
+('13012012', 'James Situmorang', 'Medan', '1995-04-02','Kedokteran','Kedokteran Gigi', 2.7)
