@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Students;
 use App\Http\Requests\StoreStudentsRequest;
 use App\Http\Requests\UpdateStudentsRequest;
+use App\Models\Students;
 
 class StudentsController extends Controller
 {
@@ -13,7 +13,9 @@ class StudentsController extends Controller
      */
     public function index()
     {
-        //
+        return view('students')->with([
+            'students' => Students::all(),
+        ]);
     }
 
     /**
@@ -21,7 +23,6 @@ class StudentsController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -29,7 +30,6 @@ class StudentsController extends Controller
      */
     public function store(StoreStudentsRequest $request)
     {
-        //
     }
 
     /**
@@ -37,7 +37,6 @@ class StudentsController extends Controller
      */
     public function show(Students $students)
     {
-        //
     }
 
     /**
@@ -45,7 +44,6 @@ class StudentsController extends Controller
      */
     public function edit(Students $students)
     {
-        //
     }
 
     /**
@@ -53,7 +51,6 @@ class StudentsController extends Controller
      */
     public function update(UpdateStudentsRequest $request, Students $students)
     {
-        //
     }
 
     /**
@@ -61,6 +58,5 @@ class StudentsController extends Controller
      */
     public function destroy(Students $students)
     {
-        //
     }
 }

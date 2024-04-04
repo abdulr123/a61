@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StudentsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/students', function () {
         return view('students');
     })->name('students');
+    // menampilkan data
+    Route::get('/students', [StudentsController::class, 'index'])->name('students');
 });
 
 require __DIR__.'/auth.php';
